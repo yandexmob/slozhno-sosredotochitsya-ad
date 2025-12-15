@@ -1,5 +1,5 @@
 :root.theme-dark {
-  --bg-color: #000028; 
+  --bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
   --text-color: #f1b2ce;
   --accent-color: #FF0070;
@@ -9,7 +9,7 @@
 }
 
 .theme-dark .rec {
-  display: inline-block; 
+  display: inline-block;
   color: var(--rec-color);
 }
 

@@ -24,7 +24,7 @@
   grid-template-rows: 1fr min-content 1fr;
   grid-template-columns: 1fr;
   align-items: center;
-  justify-items: start; 
+  justify-items: start;
 }
 
 .footer {
@@ -58,7 +58,7 @@
 .rec {
   position: absolute;
   top: var(--content-padding);
-  right: calc(var(--content-padding) + 30px); 
+  right: calc(var(--content-padding) + 30px);
   font-size: 18px;
   line-height: 25px;
   font-weight: var(--font-weight-regular);
@@ -77,9 +77,9 @@
 
 
 .header__theme-menu {
-  justify-self: center; 
+  justify-self: center;
   align-self: start;
-  margin-top: calc(var(--content-padding) + 10px); 
+  margin-top: calc(var(--content-padding) + 10px);
 }
 
 .header__theme-menu-list {
@@ -95,7 +95,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border-color: var(--text-color); 
+  border-color: var(--text-color);
 }
 
 .header__theme-menu-button_active {
@@ -104,13 +104,13 @@
 }
 
 .header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); 
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: var(--font-weight-bold);
   line-height: 0.8;
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--bg-color); 
-  justify-self: start; 
-  margin-left: -10px; 
+  text-shadow: 4px 4px 0 var(--bg-color);
+  justify-self: start;
+  margin-left: -10px;
 }
 
 .header__text {
@@ -121,8 +121,8 @@
   max-width: 491px;
   margin-top: 50px;
   padding: 10px;
-  background-color: var(--subtitle-bg); 
-  color: var(--bg-color);               
+  background-color: var(--subtitle-bg);
+  color: var(--bg-color);
 }
 
 .title-decor {
@@ -160,10 +160,10 @@
 
 .section-subtitle {
     background-color: var(--subtitle-bg);
-    color: var(--bg-color); 
+    color: var(--bg-color);
     font-size: 18px;
     font-weight: var(--font-weight-bold);
-    padding: 5px 10px; 
+    padding: 5px 10px;
     margin-bottom: 10px;
 }
 
@@ -226,13 +226,13 @@
 
 @media (min-width: 768px) {
   .header {
-    padding-left: 20px; 
+    padding-left: 20px;
     padding-right: 20px;
   }
   
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-left: -20px; 
+    margin-left: -20px;
   }
   
   .header__text {
@@ -250,7 +250,7 @@
   }
   
   .section-title {
-      margin-bottom: 0; 
+      margin-bottom: 0;
   }
 
   .section-title_gallery {
@@ -368,7 +368,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      grid-column: 1 / -1; 
+      grid-column: 1 / -1;
   }
   .section:nth-of-type(2) .section-content {
        display: grid;
@@ -382,11 +382,6 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
-
-  .what-reduces-list {
-  display: grid;
-  gap: 20px;
-}
   
   .gallery {
       grid-template-columns: repeat(3, 1fr);
