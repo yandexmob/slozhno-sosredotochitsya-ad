@@ -1,16 +1,59 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-color: #000028; 
+  --bg-image: url(../images/cover-image-dark.png);
+  --text-color: #f1b2ce;
+  --accent-color: #FF0070;
+  --title-color: #DB00FF;
+  --subtitle-bg: #FF0070;
+  --menu-color: #fff;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .rec {
+  display: inline-block; 
+  color: var(--rec-color);
+}
+
+.theme-dark .header__title {
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.theme-dark .footer__title {
+    color: var(--title-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.theme-dark .section-title {
+    color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000028;
+    --bg-image: url(../images/cover-image-dark.png);
+    --text-color: #f1b2ce;
+    --accent-color: #FF0070;
+    --title-color: #DB00FF;
+    --subtitle-bg: #FF0070;
+    --menu-color: #fff;
+  }
+
+  .rec {
+    display: inline-block;
+    color: var(--rec-color);
+  }
+  
+  .header__title {
+    color: var(--title-color);
+    text-shadow: 4px 4px 0 var(--accent-color);
+  }
+
+  .footer__title {
+    color: var(--title-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
+  }
+  
+  .section-title {
+    color: var(--accent-color);
+  }
 }

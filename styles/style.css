@@ -1,5 +1,326 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: flex;
+  flex-direction: column;
+}
+
+.header,
+.footer {
+  position: relative;
+  display: grid;
+  height: var(--header-footer-height);
+  min-height: var(--header-footer-min-height);
+  padding: var(--content-padding);
+  align-content: center;
+  justify-items: end; 
+}
+
+.header {
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+}
+
+.footer {
+  justify-items: center;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--text-color);
+}
+
+.decorated-zone::before {
+  top: var(--content-padding);
+  right: var(--content-padding);
+  border-bottom: none;
+  border-left: none;
+}
+
+.decorated-zone::after {
+  bottom: var(--content-padding);
+  left: var(--content-padding);
+  border-top: none;
+  border-right: none;
+}
+
+.rec {
+  position: absolute;
+  top: var(--content-padding);
+  right: calc(var(--content-padding) + 30px); 
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: var(--font-weight-regular);
+  text-transform: uppercase;
+}
+.rec::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: var(--rec-color);
+    border-radius: 50%;
+    margin-left: 10px;
+    box-shadow: 0 0 10px var(--rec-color);
+}
+
+
+.header__theme-menu {
+  justify-self: center; 
+  align-self: start;
+  margin-top: calc(var(--content-padding) + 10px); 
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  border: 1px solid transparent;
+  padding: 2px 13px;
+  font-size: 18px;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--text-color); 
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--text-color);
+  pointer-events: none;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); 
+  font-weight: var(--font-weight-bold);
+  line-height: 0.8;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--bg-color); 
+  justify-self: start; 
+  margin-left: -10px; 
+}
+
+.header__text {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  justify-self: end;
+  width: 100%;
+  max-width: 491px; 
+  margin-top: 50px;
+}
+
+.title-decor {
+    background-color: var(--accent-color);
+    color: var(--bg-color); 
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--bg-color);
+}
+
+
+.main {
+  padding: 40px var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+    background-color: var(--subtitle-bg);
+    color: var(--bg-color); 
+    font-size: 18px;
+    font-weight: var(--font-weight-regular);
+    padding: 5px 10px; 
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.section-text {
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.why-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.advice-list {
+  display: grid;
+  gap: 20px;
+}
+
+.advice-item-title {
+    font-weight: var(--font-weight-bold);
+    background-color: inherit;
+    margin-bottom: 10px;
+}
+
+.gallery {
+  display: grid;
+  gap: 20px;
+}
+
+.gallery__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+@media (min-width: 768px) {
+  .header {
+    padding-left: 20px; 
+    padding-right: 20px;
+  }
+  
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px; 
+  }
+  
+  .header__text {
+      width: 50%;
+  }
+
+  .main {
+      padding: 60px 20px;
+      gap: 80px;
+  }
+  
+  .section {
+      grid-template-columns: 1fr 2fr; 
+      align-items: start;
+  }
+  
+  .section-title {
+      margin-bottom: 0; 
+  }
+  
+  .why-grid {
+      grid-column: 2 / -1;
+      display: grid;
+      gap: 20px;
+  }
+  
+  .advice-list {
+      grid-column: 2 / -1;
+  }
+  
+  .gallery {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+  }
+  
+  .gallery__image:nth-child(1) {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+  }
+  .gallery__image:nth-child(2) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+      height: 100%;
+  }
+  .gallery__image:nth-child(3) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 4;
+      height: 100%;
+  }
+  .gallery__image:nth-child(4) {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+  }
+  .gallery__image:nth-child(5) {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+  }
+  
+  .footer__title {
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: end; 
+    align-self: center; 
+    margin-top: 0;
+    grid-column: 1 / -1; 
+    position: absolute; 
+    top: 20px;
+    right: 45px; 
+    margin-right: 20px;
+  }
+  
+  .header {
+      align-items: start;
+      justify-items: start;
+      padding-top: 20px;
+  }
+  
+  .header__title {
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      align-self: center; 
+  }
+
+  .header__text {
+      font-weight: var(--font-weight-bold);
+      width: 491px;
+      justify-self: end;
+      align-self: start;
+  }
+  
+  .section {
+      grid-template-columns: 315px 1fr; 
+      gap: 20px;
+  }
+  
+  .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 20px;
+  }
+  
+  .what-reduces-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      grid-column: 1 / -1; 
+  }
+  .section:nth-of-type(2) .section-content {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 20px;
+  }
+  
+  .advice-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      grid-template-columns: 1fr;
+  }
+  
+  .gallery {
+      grid-template-columns: repeat(3, 1fr);
+  }
 }
