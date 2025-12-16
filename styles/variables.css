@@ -1,33 +1,26 @@
 :root {
-  --main-font: "IBM Plex mono", monospace;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
+  --main-font: 'IBM Plex Mono', monospace;
+  --main-font-size: 18px;
+  --main-line-height: 130%;
+  --header-articles-gap: 20px;
+  --articles-gap: 20px;
+  --shadow-color: #ff0070;
+  --header-weight: 700;
+  --text-weight: 400;
 
-  --header-footer-height: 100vh;
-  --header-footer-min-height: 668px;
+  --main-padding: 10px;
+  --main-content-vertical-padding: 40px;
+  --sections-gap: 50px;
 
-  --content-padding: 10px;
-  --content-width: min(1024px, 100%);
-  --bg-color: #ffeef6;
-  --bg-image: url(../images/cover-image-light.png);
-  --text-color: #312639;
-  --accent-color: #ff8dcb;
-  --title-color: #ffc2e6;
-  --subtitle-bg: #ff8dcb;
-  --menu-color: #312639;
-  --card-title-color: #312639;
-  --rec-color: #ff0070;
-}
-
-@media (min-width: 768px) {
-  :root {
-    --content-padding: 20px;
-  }
-}
-
-@media (min-width: 1024px) {
-  :root {
-    --content-padding: 20px;
-    --content-width: 1024px;
-  }
+  --main-text-color: #f1b2ce;  /* #353430 */
+  --bg-color: #000028;  /* #fff1f7 */
+  --main-header-color: #db00ff; /* #ffc2e6 */
+  --button-color: #ff0070;  /* #353430 */
+  --button-hover-border: #ff007066; /* #32312d66 */
+  --section-header-color: #ff0070;  /* #353430 */
+  --article-header-color: #000028;  /* #353430 */
+  --article-bg-color: #ff0070;  /* #ff8dcb */
+  --link-shadow-color: #ff0070; /* #ff8dcb */
+  --bg-image: url("../images/cover-image-dark.png");
+  --visible: visible;
 }

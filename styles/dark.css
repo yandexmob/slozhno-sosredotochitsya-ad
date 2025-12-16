@@ -1,14 +1,27 @@
-:root.theme-dark {
+.page.theme_dark {
+  --main-text-color: #f1b2ce;
   --bg-color: #000028;
-  --bg-image: url(../images/cover-image-dark.png);
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
-  --title-color: #db00ff;
-  --subtitle-bg: #ff0070;
-  --menu-color: #000028;
+  --main-header-color: #db00ff;
+  --button-color: #ff0070;
+  --section-header-color: #ff0070;
+  --article-header-color: #000028;
+  --article-bg-color: #ff0070;
+  --link-shadow-color: #ff0070;
+  --bg-image: url("../images/cover-image-dark.png");
+  --visible: visible;
 }
 
-.theme-dark .rec {
-  display: inline-block;
-  color: var(--rec-color);
+@media (prefers-color-scheme: dark) {
+  .page {
+    --main-text-color: #f1b2ce;
+    --bg-color: #000028;
+    --main-header-color: #db00ff;
+    --button-color: #ff0070;
+    --section-header-color: #ff0070;
+    --article-header-color: #000028;
+    --article-bg-color: #ff0070;
+    --link-shadow-color: #ff0070;
+    --bg-image: url("../images/cover-image-dark.png");
+    --visible: visible;
+  }
 }
