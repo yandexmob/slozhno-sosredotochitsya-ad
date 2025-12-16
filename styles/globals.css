@@ -6,8 +6,7 @@
 
 body {
   min-inline-size: 375px;
-  max-inline-size: 1440px;
-  margin: 0 auto;
+  margin: 0;
   font-family: var(--main-font);
   font-weight: var(--font-weight-regular);
   color: var(--text-color);
@@ -17,6 +16,13 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.page {
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: var(--content-padding);
+  max-inline-size: var(--content-width);
 }
 
 h1,
@@ -73,7 +79,6 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* Утилитарные классы */
 .visually-hidden {
   position: absolute;
   width: 1px;
